@@ -1690,3 +1690,547 @@ button { font: inherit; }
         gap: 10px;
     }
 }
+
+/* =========================================================
+   DANICAN 360 — RESPONSIVE CONSOLIDADO
+   Corrección 2026-10-03
+   Mantiene escritorio intacto y limita los ajustes a tablet/móvil.
+   ========================================================= */
+
+/* TABLET Y MÓVIL */
+@media (max-width: 850px) {
+    .nav {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 18px 5%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(20, 70, 50, 0.08);
+    }
+
+    .nav.active { display: flex; }
+    .menu-button { display: block; }
+
+    .hero {
+        min-height: auto;
+        padding-top: 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 48px 0 58px;
+    }
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .hero-image {
+        max-width: 620px;
+        height: 380px;
+        margin: 0 auto;
+    }
+
+    .value-grid { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr; max-width: 620px; }
+    .social-grid { grid-template-columns: 1fr; max-width: 650px; }
+
+    /* Landing Estética Canina */
+    .course-hero {
+        padding: 65px 0 75px;
+    }
+
+    .course-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .course-hero-content h1 {
+        font-size: clamp(3rem, 9vw, 4.5rem);
+    }
+
+    .course-hero-visual {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .course-hero-image {
+        width: 100%;
+    }
+
+    .course-hero-photo {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .course-learning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-audience-grid {
+        grid-template-columns: 1fr;
+        max-width: 760px;
+        gap: 35px;
+    }
+
+    .course-product-card {
+        grid-template-columns: 1fr;
+        padding: 40px;
+        gap: 38px;
+    }
+
+    .course-product-visual {
+        min-height: 300px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .nav {
+        top: 68px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .logo { font-size: 1.35rem; }
+
+    .hero-content {
+        gap: 30px;
+        padding: 38px 0 52px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.65rem, 13vw, 3.5rem);
+        line-height: 0.98;
+        letter-spacing: -2px;
+    }
+
+    .hero-text > p {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        margin-top: 26px;
+    }
+
+    .button { width: 100%; }
+
+    .hero-visual {
+        min-height: 325px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 305px;
+        border-radius: 20px;
+    }
+
+    .trust-card {
+        left: 12px;
+        right: 12px;
+        bottom: -18px;
+        min-width: 0;
+    }
+
+    .value-section,
+    .products-section,
+    .about-section {
+        padding: 72px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .learn-section {
+        padding: 76px 0;
+    }
+
+    .social-section {
+        padding: 65px 0;
+    }
+
+    .social-card {
+        min-height: 0;
+        grid-template-columns: 50px minmax(0, 1fr) auto;
+        gap: 14px;
+        padding: 20px 17px;
+    }
+
+    /* Catálogos */
+    .catalog-hero {
+        padding: 52px 0 62px;
+    }
+
+    .catalog-hero h1 {
+        font-size: clamp(2.6rem, 12vw, 3.5rem);
+        letter-spacing: -2px;
+    }
+
+    .catalog-section {
+        padding: 72px 0;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .catalog-grid .catalog-card {
+        max-width: 100%;
+    }
+
+    .catalog-card-image {
+        min-height: 225px;
+    }
+
+    .catalog-card-content {
+        padding: 24px;
+    }
+
+    .catalog-message {
+        padding: 76px 0;
+    }
+
+    /* Estética Canina */
+    .course-hero {
+        padding: 38px 0 58px;
+    }
+
+    .course-hero-grid {
+        gap: 30px;
+    }
+
+    .course-hero-content {
+        padding-top: 0;
+    }
+
+    .course-hero-content h1 {
+        margin-bottom: 16px;
+        font-size: clamp(2.35rem, 11.5vw, 2.9rem);
+        line-height: 1.02;
+        letter-spacing: -1.6px;
+    }
+
+    .course-hero-description,
+    .course-hero-content > p {
+        font-size: 0.96rem;
+        line-height: 1.55;
+    }
+
+    .course-hero-description {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .course-benefit-mini {
+        margin-top: 20px;
+        margin-bottom: 16px;
+        gap: 9px;
+    }
+
+    .hero-benefit-item {
+        gap: 10px;
+    }
+
+    .hero-benefit-item strong {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .hero-benefit-item small {
+        font-size: 12px;
+        line-height: 1.25;
+    }
+
+    .course-hero-actions,
+    .course-hero-buttons {
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .course-hero-image {
+        border-radius: 22px;
+    }
+
+    .course-hero-photo {
+        height: auto;
+        max-height: 420px;
+        object-fit: cover;
+    }
+
+    .course-section,
+    .course-intro,
+    .course-learning,
+    .course-audience,
+    .course-product,
+    .course-philosophy,
+    .course-final-cta {
+        padding: 72px 0;
+    }
+
+    .course-learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-learning-card {
+        min-height: auto;
+        padding: 27px;
+    }
+
+    .course-audience-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .course-product-card {
+        padding: 22px;
+        gap: 30px;
+        border-radius: 22px;
+    }
+
+    .course-product-visual {
+        min-height: 250px;
+    }
+
+    .course-product-info h2 {
+        font-size: 2.15rem;
+    }
+
+    .course-transparency {
+        padding: 52px 0;
+    }
+
+    .course-transparency-box {
+        padding: 27px 23px;
+        flex-direction: column;
+    }
+
+    .course-final-cta h2 {
+        font-size: clamp(2.25rem, 11vw, 2.6rem);
+    }
+
+    .course-final-cta .button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   DANICAN 360 — AJUSTE FINAL LANDING ESTÉTICA CANINA
+   2026-10-03
+   Completa selectores usados por estetica-canina.html y
+   compacta el espaciado de escritorio sin alterar móvil.
+   ========================================================= */
+
+/* Selectores reales usados en la landing */
+.course-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.affiliate-note {
+    max-width: 650px;
+    margin-top: 18px;
+    color: #66756e;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.course-floating-card {
+    position: absolute;
+    left: 22px;
+    bottom: -18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.course-floating-card > span { font-size: 1.5rem; }
+.course-floating-card strong { color: var(--green); }
+.course-floating-card p { margin: 0; color: var(--text); font-size: 0.84rem; }
+
+.course-intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.course-intro-container > p {
+    max-width: 760px;
+    margin: 24px auto 0;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.course-audience-grid {
+    max-width: 1180px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 70px;
+    align-items: start;
+}
+
+.course-audience-title h2 {
+    margin-top: 12px;
+    font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+}
+
+.course-audience-list { min-width: 0; }
+
+.audience-item {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.audience-item h3 {
+    margin-bottom: 6px;
+    font-size: 1.18rem;
+    line-height: 1.3;
+}
+
+.audience-item p {
+    color: var(--text);
+    line-height: 1.65;
+}
+
+.course-philosophy {
+    padding: 78px 0;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(22,135,91,0.08), transparent 34%),
+        #f4f9f6;
+}
+
+.course-philosophy-content {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.course-philosophy-content h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2.2rem, 3.6vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -1.8px;
+}
+
+.course-philosophy-content p {
+    max-width: 1050px;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.course-check-list {
+    display: grid;
+    gap: 10px;
+    margin: 24px 0;
+    color: var(--text);
+}
+
+.course-final-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.course-final-content small {
+    display: block;
+    margin-top: 16px;
+    color: #aebdb5;
+}
+
+/* Escritorio: compactar espacios sin modificar la composición */
+@media (min-width: 851px) {
+    .course-hero { padding: 78px 0 82px; }
+    .course-intro { padding: 78px 0; }
+    .course-learning { padding: 85px 0; }
+    .course-audience { padding: 82px 0; }
+    .course-product { padding: 78px 0; }
+    .course-transparency { padding: 55px 0; }
+    .course-final-cta { padding: 85px 0; }
+
+    .course-product-card {
+        padding: 48px;
+        gap: 48px;
+    }
+
+    .course-transparency-box {
+        max-width: 1180px;
+        padding: 38px 46px;
+    }
+
+    .course-transparency-box h2 {
+        margin-bottom: 12px;
+        font-size: clamp(1.7rem, 2.3vw, 2.35rem);
+        line-height: 1.2;
+    }
+
+    .course-transparency-box p + p { margin-top: 12px; }
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    .course-hero-buttons { flex-wrap: wrap; }
+    .course-audience-grid { grid-template-columns: 1fr; gap: 34px; }
+    .course-philosophy { padding: 72px 0; }
+    .course-philosophy-content { max-width: 760px; }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .course-hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .course-floating-card {
+        left: 12px;
+        right: 12px;
+        bottom: -16px;
+    }
+
+    .course-intro-container { text-align: left; }
+    .course-intro-container > p { margin-top: 18px; }
+
+    .course-audience-title h2 {
+        font-size: 2.25rem;
+        letter-spacing: -1.2px;
+    }
+
+    .audience-item { grid-template-columns: 40px 1fr; gap: 14px; }
+
+    .course-philosophy { padding: 68px 0; }
+    .course-philosophy-content h2 { font-size: 2.35rem; }
+}
